@@ -12,9 +12,9 @@ However I have not seen any that relly point out how easy it is to convert from 
     def foo(&blk)
 	   
         #get the "block" from the proc and create a new lambda
-	l = lambda &blk
+        l = lambda &blk
 	   
-	#call it, and  save return value
+        #call it, and  save return value
         retval  = l.call :one, :two
           
         puts "this *get* executed"
