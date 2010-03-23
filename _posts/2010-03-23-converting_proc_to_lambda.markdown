@@ -11,15 +11,15 @@ However I have not seen any that relly point out how easy it is to convert from 
 {% highlight ruby %}
     def foo(&blk)
 	   
-	   #get the "block" from the proc and create a new lambda
-	   l = lambda &blk
+        #get the "block" from the proc and create a new lambda
+	l = lambda &blk
 	   
-	   #call it, and  save return value
-       retval  = l.call :one, :two
+	#call it, and  save return value
+        retval  = l.call :one, :two
           
-       puts "this *get* executed"
+        puts "this *get* executed"
             
-       retval
+        retval
     end
               
     puts "Call to foo returned: " << foo {|a,b| return a.to_s+b.to_s}
